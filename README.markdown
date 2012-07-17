@@ -67,6 +67,15 @@ The headers are in the form of a dict giving the header name and values. The fun
 
 It is the responsibility of the caller to correctly place the header values into the request object that is to be used, including the `Authorization` header.
 
+## Request Headers
+
+    Header              Value                                               Example
+    -------------------------------------------------------------------------------------------------------
+    Authorization       FOST <user_identifier_key>:<hmac>                   FOST 1:0uW1quX64qs+rZj9HIIi4Es6bII=
+    X_FOST_TIMESTAMP    datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')     2012-7-17 19:52:00
+    X_FOST_User         <username>                                          root
+    X_FOST_HEADERS      <space delimited list of X-FOST headers>            root
+
 
 # Running tests #
 
